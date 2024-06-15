@@ -194,17 +194,17 @@ const PatientDetails = () => {
 
   return (
     <div className="bg-white px-2  lg:px-8 shadow-md h-full">
-      <div className="flex flex-col lg:flex-row justify-between items-center py-4 ">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-2 lg:gap-4 items-center py-4 ">
         <p className="text-sm hidden lg:flex font-semibold">Patient Details</p>
         <input
           type="text"
-          className="w-full mb-4 lg:mb-0 lg:w-[350px] h-[45px] lg:h-[40px] outline-none px-3 rounded-sm border border-slate-300"
+          className="w-full mb-4 lg:mb-0  h-[45px] lg:h-[40px] outline-none px-3 rounded-sm border border-slate-300"
           placeholder="Search By Name ,Phone Number"
           onChange={handleSearchChange}
         />
         <Select
           placeholder="Select Gender"
-          className="w-full lg:w-[150px] h-[40px]"
+          className="w-full  h-[40px]"
           onChange={handleGenderChange}
           allowClear
         >

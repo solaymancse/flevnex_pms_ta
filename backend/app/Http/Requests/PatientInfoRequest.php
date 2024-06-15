@@ -19,8 +19,8 @@ class PatientInfoRequest extends FormRequest
             'name' => 'required|string|max:255|regex:/^[A-Za-z\s]+$/u',
             'age' => 'required|integer|min:0|max:120',
             'gender' => 'required|string|in:Male,Female,Other',
-            'number' => 'required|numeric|max:20|regex:/^\+?[1-9]\d{1,14}$/',
-            'emergency' => 'required|numeric|max:20|regex:/^\+?[1-9]\d{1,14}$/',
+            'number' => 'required|string|max:20|regex:/^\+?[0-9]+$/',
+            'emergency' => 'required|string|max:20|regex:/^\+?[0-9]+$/',
             'address' => 'required|string|max:255',
         ];
     }
@@ -35,6 +35,8 @@ class PatientInfoRequest extends FormRequest
             'gender.in' => 'The gender must be either Male, Female, or Other.',
             'number.max' => 'The phone number may not be greater than 20 characters.',
             'emergency.max' => 'The emergency number may not be greater than 20 characters.',
+            'number.regex' => 'The phone number format is invalid.',
+            'emergency.regex' => 'The emergency number format is invalid.',
         ];
     }
 
