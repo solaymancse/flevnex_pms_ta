@@ -36,7 +36,7 @@ const Home = () => {
           <div className="text-center flex gap-4 justify-around items-center  border  bg-white w-full lg:w-[400px] h-[100px] lg:h-[150px]">
             <div className="flex flex-col gap-4 items-center">
               <FaUserInjured size={25} color="#9333EA" />
-              <p className="text-sm lg:text-base font-medium">Today Register Patients</p>
+              <p className="text-sm lg:text-base font-medium">Today Register </p>
             </div>
             <p className="text-3xl py-3 lg:text-5xl font-semibold text-[#9333ea]">
               {today?.count}

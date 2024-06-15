@@ -134,6 +134,7 @@ const PatientDetails = () => {
       title: "Patient ID",
       dataIndex: "patient_id",
       key: "patient_id",
+      
     },
     {
       title: "Patient Name",
@@ -193,7 +194,7 @@ const PatientDetails = () => {
   ];
 
   return (
-    <div className="bg-white px-2  lg:px-8 shadow-md h-full">
+    <div className="bg-white px-2 w-full  lg:px-8 shadow-md h-full">
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-2 lg:gap-4 items-center py-4 ">
         <p className="text-sm hidden lg:flex font-semibold">Patient Details</p>
         <input
@@ -228,18 +229,15 @@ const PatientDetails = () => {
           fetchData={fetchData}
         />
       </div>
-      <div className="mt-6">
-        <Table
+      <Table
           columns={columns}
           dataSource={patientData}
           rowKey="id"
           pagination={pagination}
           onChange={handleTableChange}
-          scroll={{ x: 1000 }} 
-       
+          scroll={{ x: 1000 }}
           
         />
-      </div>
     </div>
   );
 };

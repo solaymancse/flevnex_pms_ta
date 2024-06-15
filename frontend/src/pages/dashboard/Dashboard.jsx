@@ -25,14 +25,14 @@ const Dashboard = () => {
       <div
         className={`flex flex-col ${
           hide ? isSmallScreen ? "w-[85%]" : "w-[100%]" : isSmallScreen ? "w-[100%]" : "w-[85%]"
-        } h-screen`}
+        } h-screen overflow-x-hidden transition-all duration-500 ease-in-out`}
       >
         <Navbar
           handleBar={handleBar}
           handleDropDown={handleDropDown}
           dropdown={dropdown}
         />
-        <div className="body flex-grow overflow-y-auto  p-2 lg:p-6">
+        <div className=" flex-grow overflow-y-auto   p-2 lg:py-6">
           <Outlet />
         </div>
       </div>
