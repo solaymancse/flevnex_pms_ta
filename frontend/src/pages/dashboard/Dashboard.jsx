@@ -1,7 +1,4 @@
 import { useState } from "react";
-import { CgMenuRight } from "react-icons/cg";
-import { IoMdHome } from "react-icons/io";
-import PatientDetails from "./patientDeatils/PatientDetails";
 import Navbar from "../../layout/Navbar";
 import Sidebar from "../../layout/Sidebar";
 import { Outlet } from "react-router-dom";
